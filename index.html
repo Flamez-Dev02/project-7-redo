@@ -1,0 +1,515 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Week 8 - GitHub Actions CI</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            text-align: center;
+            padding: 50px 20px;
+            line-height: 1.7;
+        }
+
+        main {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #1d4ed8;
+            margin-top: 35px;
+        }
+
+        h3 {
+            color: #334155;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+
+        section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        code {
+            background: #e2e8f0;
+            padding: 3px 6px;
+            border-radius: 5px;
+        }
+
+        pre {
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            text-align: left;
+        }
+
+        pre code {
+            background: transparent;
+            padding: 0;
+            color: inherit;
+        }
+
+        .highlight {
+            background: #dbeafe;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .contact {
+            background: #dcfce7;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .contact a {
+            color: #15803d;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 35px;
+            color: #64748b;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <h1>Week 8: GitHub Actions</h1>
+
+        <p><strong>Basic Continuous Integration Project</strong></p>
+
+        <p>
+            Welcome to my Week 8 cloud computing practical project.
+            This project focuses on learning the basics of Continuous
+            Integration (CI) using GitHub Actions.
+        </p>
+
+        <p>
+            The website demonstrates how developers can use automation
+            to check project files whenever changes are pushed
+            to a GitHub repository.
+        </p>
+
+        <div class="highlight">
+            <h3>Project Overview</h3>
+
+            <p>
+                This project introduces the use of GitHub Actions
+                to automate simple checks on a website project.
+                It also provides an opportunity to practise Git,
+                GitHub repositories, workflow configuration,
+                and basic TypeScript concepts.
+            </p>
+        </div>
+
+        <section>
+            <h2>About Continuous Integration</h2>
+
+            <p>
+                Continuous Integration is a software development
+                practice in which developers regularly add their
+                code changes to a shared repository.
+                Automated checks can then be performed to help
+                identify errors early in the development process.
+            </p>
+
+            <p>
+                Instead of checking every project file manually,
+                a developer can configure a workflow to run
+                automatically when new code is pushed.
+            </p>
+
+            <p>
+                In this project, GitHub Actions is used to
+                demonstrate a basic automated check for the
+                existence of the website's HTML file.
+            </p>
+        </section>
+
+        <section>
+            <h2>What Is GitHub Actions?</h2>
+
+            <p>
+                GitHub Actions is an automation platform available
+                on GitHub. It allows developers to create workflows
+                that perform tasks in response to events in a
+                repository.
+            </p>
+
+            <p>
+                These tasks may include checking files, running
+                tests, building applications, and preparing software
+                for deployment.
+            </p>
+
+            <h3>How It Works</h3>
+
+            <ul>
+                <li>
+                    A developer creates or updates a project file.
+                </li>
+
+                <li>
+                    The changes are committed using Git.
+                </li>
+
+                <li>
+                    The developer pushes the changes to GitHub.
+                </li>
+
+                <li>
+                    GitHub Actions detects the configured event.
+                </li>
+
+                <li>
+                    The workflow starts an automated job.
+                </li>
+
+                <li>
+                    The job performs the checks defined in the
+                    workflow configuration.
+                </li>
+
+                <li>
+                    GitHub displays the workflow result in the
+                    Actions section of the repository.
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Project Objectives</h2>
+
+            <p>
+                The main objectives of this practical project
+                are to:
+            </p>
+
+            <ul>
+                <li>
+                    Understand the basic concept of Continuous
+                    Integration.
+                </li>
+
+                <li>
+                    Learn how GitHub Actions workflows are
+                    configured.
+                </li>
+
+                <li>
+                    Create a simple HTML website.
+                </li>
+
+                <li>
+                    Use Git to track project changes.
+                </li>
+
+                <li>
+                    Connect a local project to a GitHub repository.
+                </li>
+
+                <li>
+                    Create an automated workflow that checks
+                    whether a required file exists.
+                </li>
+
+                <li>
+                    Understand how workflow results can be
+                    inspected on GitHub.
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Technologies Used</h2>
+
+            <h3>HTML</h3>
+
+            <p>
+                HTML is used to structure the website and display
+                its headings, paragraphs, sections, and contact
+                information.
+            </p>
+
+            <h3>CSS</h3>
+
+            <p>
+                CSS is used to style the website by controlling
+                its colours, spacing, layout, typography,
+                and background appearance.
+            </p>
+
+            <h3>Git</h3>
+
+            <p>
+                Git is a version control system used to track
+                changes made to project files. It allows
+                developers to create commits and manage different
+                stages of their work.
+            </p>
+
+            <h3>GitHub</h3>
+
+            <p>
+                GitHub is used to host the project repository
+                online and provide access to GitHub Actions
+                for workflow automation.
+            </p>
+
+            <h3>TypeScript</h3>
+
+            <p>
+                TypeScript is a programming language built on
+                JavaScript that adds static type checking.
+                It helps developers identify certain programming
+                errors while writing and checking code.
+            </p>
+
+            <p>
+                TypeScript is commonly used when developing
+                larger JavaScript applications because its
+                type system can make code easier to understand
+                and maintain.
+            </p>
+        </section>
+
+        <section>
+            <h2>Introduction to TypeScript</h2>
+
+            <p>
+                TypeScript allows developers to specify the
+                expected type of a variable, function parameter,
+                or return value.
+            </p>
+
+            <p>
+                For example, a variable that is intended to
+                store a person's name can be declared with
+                the string type.
+            </p>
+
+            <pre><code>// Example TypeScript code
+
+let studentName: string = "Cloud Computing Student";
+
+let projectWeek: number = 8;
+
+function displayProject(name: string): string {
+    return "Welcome to " + name;
+}
+
+console.log(displayProject(studentName));
+console.log(projectWeek);
+</code></pre>
+
+            <p>
+                In this example, <code>studentName</code>
+                stores text, while <code>projectWeek</code>
+                stores a number.
+                The function accepts a string and returns a
+                string value.
+            </p>
+
+            <p>
+                TypeScript code is normally compiled into
+                JavaScript before it runs in a browser or
+                compatible JavaScript environment.
+            </p>
+        </section>
+
+        <section>
+            <h2>Basic CI Workflow</h2>
+
+            <p>
+                A GitHub Actions workflow is written in a YAML
+                configuration file and stored inside the
+                repository's <code>.github/workflows</code>
+                directory.
+            </p>
+
+            <p>
+                The workflow can be configured to run whenever
+                changes are pushed to the main branch.
+                Its job can then check whether the
+                <code>index.html</code> file exists.
+            </p>
+
+            <pre><code>name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check website files
+        run: |
+          test -f index.html
+          echo "index.html exists"
+          echo "CI check completed successfully"
+</code></pre>
+
+            <p>
+                The workflow first checks out the repository
+                files. It then uses a simple file check to
+                determine whether <code>index.html</code>
+                exists.
+            </p>
+
+            <p>
+                If the required file is missing, the check
+                fails. If the file exists, the command
+                completes successfully.
+            </p>
+        </section>
+
+        <section>
+            <h2>Benefits of Continuous Integration</h2>
+
+            <ul>
+                <li>
+                    <strong>Early error detection:</strong>
+                    Automated checks can help identify problems
+                    shortly after code changes are pushed.
+                </li>
+
+                <li>
+                    <strong>Reduced manual work:</strong>
+                    Repeated checks can be performed automatically.
+                </li>
+
+                <li>
+                    <strong>Consistency:</strong>
+                    The same workflow steps can run each time
+                    the configured event occurs.
+                </li>
+
+                <li>
+                    <strong>Improved collaboration:</strong>
+                    Team members can view workflow results
+                    associated with repository changes.
+                </li>
+
+                <li>
+                    <strong>Better development practices:</strong>
+                    Developers can gradually add more checks
+                    as their projects become more complex.
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>What I Learned</h2>
+
+            <p>
+                This practical project introduces the relationship
+                between Git, GitHub repositories, and automated
+                software checks.
+            </p>
+
+            <p>
+                It demonstrates how a workflow can be configured
+                to respond to a push event and execute commands
+                on a GitHub-hosted runner.
+            </p>
+
+            <p>
+                It also provides an introduction to TypeScript
+                and its role in JavaScript application development.
+                The project shows how automation can support
+                software development by checking important files
+                and reporting whether a workflow succeeds or fails.
+            </p>
+        </section>
+
+        <div class="contact">
+            <h2>Contact Me</h2>
+
+            <p>
+                Have questions about this project?
+                You can contact me through WhatsApp.
+            </p>
+
+            <p>
+                WhatsApp:
+                <a href="https://wa.me/2348060763384"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    08060763384
+                </a>
+            </p>
+
+            <p>
+                Click the number above to open a WhatsApp
+                conversation.
+            </p>
+        </div>
+
+        <footer>
+            <p>
+                Week 8 Cloud Computing Practical Project
+            </p>
+
+            <p>
+                GitHub Actions | Continuous Integration |
+                HTML | CSS | TypeScript
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
+

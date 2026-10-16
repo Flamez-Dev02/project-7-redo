@@ -1,0 +1,21 @@
+
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check website files
+        run: |
+          test -f index.html
+          echo "index.html exists"
+          echo "CI check completed successfully"
